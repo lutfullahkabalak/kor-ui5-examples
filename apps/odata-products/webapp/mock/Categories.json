@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "VAL",
+    "Name": "Valves"
+  },
+  {
+    "Id": "PMP",
+    "Name": "Pumps"
+  },
+  {
+    "Id": "SEA",
+    "Name": "Seals"
+  },
+  {
+    "Id": "SEN",
+    "Name": "Sensors"
+  }
+]

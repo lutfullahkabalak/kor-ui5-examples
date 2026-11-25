@@ -1,0 +1,19 @@
+{
+  "name": "kor-ui5-examples",
+  "private": true,
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "shots": "node scripts/check.mjs --shots"
+  },
+  "devDependencies": {
+    "puppeteer-core": "25.18.1"
+  }
+}

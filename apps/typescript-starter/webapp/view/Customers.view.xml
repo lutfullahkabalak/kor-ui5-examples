@@ -1,0 +1,12 @@
+<mvc:View controllerName="kor.example.typescriptstarter.controller.Customers" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:k="kor.ui">
+  <k:Stack gap="20" class="page">
+    <k:Text kind="display" text="{i18n>customers}"/>
+    <k:DataGrid label="{i18n>customers}" rows="{/customers}" height="24rem" rowPress=".onCustomer">
+      <k:Column label="{i18n>id}" path="id" type="link" width="110"/>
+      <k:Column label="{i18n>name}" path="name" grow="1"/>
+      <k:Column label="{i18n>city}" path="city"/>
+      <k:Column label="{i18n>limit}" path="limit" type="currency" unitPath="currency"/>
+    </k:DataGrid>
+  </k:Stack>
+</mvc:View>

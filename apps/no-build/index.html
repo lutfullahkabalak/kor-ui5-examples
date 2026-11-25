@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kor without a build step</title>
+  <style>
+    html, body { margin: 0; min-height: 100%; background: var(--kor-canvas); }
+    .page { box-sizing: border-box; max-width: 60rem; margin-inline: auto; padding: clamp(1rem, 4vw, 3rem); }
+  </style>
+  <script>
+    const tr = new URLSearchParams(location.search).get("lang") === "tr";
+    window["sap-ui-config"] = { language: tr ? "tr" : "en" };
+    document.documentElement.lang = tr ? "tr" : "en";
+  </script>
+  <script id="sap-ui-bootstrap"
+    src="https://sdk.openui5.org/1.108.55/resources/sap-ui-core.js"
+    data-sap-ui-async="true"
+    data-sap-ui-theme="sap_horizon"
+    data-sap-ui-compatVersion="edge"
+    data-sap-ui-libs="sap.ui.core"
+    data-sap-ui-resourceroots='{"kor.ui": "https://cdn.jsdelivr.net/npm/kor-ui5@0.1.0/src/"}'></script>
+</head>
+<body class="kor">
+  <main id="content"></main>
+  <script>
+    const t = tr
+      ? { title: "Görevler", task: "Görev", owner: "Sorumlu", due: "Tarih", changed: "Güncellendi", add: "Görev ekle", fresh: "Yeni görev" }
+      : { title: "Tasks", task: "Task", owner: "Owner", due: "Due", changed: "Updated", add: "Add task", fresh: "New task" };
+    const view = `<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:k="kor.ui" displayBlock="true">
+      <k:Stack gap="20" class="page">
+        <k:Text kind="display" text="{t>/title}"/>
+        <k:Stack row="true"><k:Button text="{t>/add}" kind="primary" icon="plus" press=".onAdd"/></k:Stack>
+        <k:DataGrid label="{t>/title}" rows="{/tasks}" height="18rem" cellChange=".onChange">
+          <k:Column label="{t>/task}" path="task" grow="1" editable="true"/>
+          <k:Column label="{t>/owner}" path="owner" type="person"/>
+          <k:Column label="{t>/due}" path="due" type="date" editable="true"/>
+        </k:DataGrid>
+      </k:Stack>
+    </mvc:View>`;
+    sap.ui.getCore().attachInit(() => sap.ui.require([
+      "sap/ui/core/mvc/XMLView", "sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel", "kor/ui/library"
+    ], async (XMLView, Controller, JSONModel) => {
+      const Toast = await new Promise((ok) => sap.ui.require(["kor/ui/Toast"], ok));
+      const model = new JSONModel({ tasks: [
+        { task: tr ? "Kargoyu ara" : "Call the carrier", owner: "Mert Kaya", due: "2026-12-02" },
+        { task: tr ? "Faturayı kontrol et" : "Check the invoice", owner: "Elif Aydın", due: "2026-12-04" }
+      ] });
+      const Main = Controller.extend("sample.Main", {
+        onAdd() {
+          model.setProperty("/tasks", [...model.getProperty("/tasks"), { task: t.fresh, owner: "Elif Aydın", due: "2026-12-07" }]);
+        },
+        onChange() { Toast.show(t.changed); }
+      });
+      document.title = t.title;
+      const main = await XMLView.create({ definition: view, controller: new Main() });
+      main.setModel(model).setModel(new JSONModel(t), "t").placeAt("content");
+    }));
+  </script>
+</body>
+</html>

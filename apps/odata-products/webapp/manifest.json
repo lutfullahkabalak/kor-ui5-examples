@@ -1,0 +1,72 @@
+{
+  "_version": "1.40.0",
+  "sap.app": {
+    "id": "kor.example.odataproducts",
+    "type": "application",
+    "title": "{{appTitle}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "i18n": {
+      "bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": [
+        "",
+        "tr"
+      ],
+      "fallbackLocale": ""
+    },
+    "dataSources": {
+      "main": {
+        "uri": "/mock/products/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.108.0",
+      "libs": {
+        "sap.ui.core": {},
+        "kor.ui": {}
+      }
+    },
+    "rootView": {
+      "viewName": "kor.example.odataproducts.view.Products",
+      "type": "XML",
+      "id": "main",
+      "async": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "kor.example.odataproducts.i18n.i18n",
+          "supportedLocales": [
+            "",
+            "tr"
+          ],
+          "fallbackLocale": ""
+        }
+      },
+      "": {
+        "dataSource": "main",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline"
+        }
+      }
+    }
+  }
+}

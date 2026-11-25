@@ -1,0 +1,49 @@
+<mvc:View controllerName="kor.example.approvals.controller.Approvals" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:k="kor.ui">
+  <k:Stack gap="20" class="page">
+    <k:dependents>
+      <k:Dialog open="{ui>/rejecting}" title="{ui>/rejectTitle}" danger="true" close=".onCancel">
+        <k:TextField label="{i18n>reason}" rows="3" required="true" value="{ui>/reason}" error="{ui>/reasonError}"/>
+        <k:footer>
+          <k:Button text="{i18n>cancel}" press=".onCancel"/>
+          <k:Button text="{i18n>reject}" kind="danger" press=".onRejectConfirm"/>
+        </k:footer>
+      </k:Dialog>
+    </k:dependents>
+    <k:Stack row="true" gap="12" align="center" justify="space-between">
+      <k:Text kind="display" text="{i18n>appTitle}"/>
+      <k:Segmented label="{i18n>language}" selectedKey="{ui>/language}" change=".onLanguage">
+        <core:Item key="en" text="EN"/>
+        <core:Item key="tr" text="TR"/>
+      </k:Segmented>
+    </k:Stack>
+    <k:Text kind="muted" text="{i18n>intro}"/>
+    <k:Stack class="split" gap="20">
+      <k:DataGrid label="{i18n>appTitle}" rows="{/requests}" height="26rem" rowPress=".onRequest">
+        <k:Column label="{i18n>request}" path="id" type="link" width="125" pinned="true"/>
+        <k:Column label="{i18n>subject}" path="subject" grow="1" width="150"/>
+        <k:Column label="{i18n>amount}" path="amount" type="currency" unitPath="currency" width="130"/>
+        <k:Column label="{i18n>due}" path="due" type="date" width="120"/>
+        <k:Column label="{i18n>status}" path="status" type="status" states="{ui>/states}" formatter=".statusText" width="120"/>
+      </k:DataGrid>
+      <k:Stack id="detail" gap="20" class="panel">
+        <k:Stack gap="4">
+          <k:Text kind="heading" text="{subject}"/>
+          <k:Text kind="muted" text="{path: 'supplier', formatter: '.supplierText'}"/>
+        </k:Stack>
+        <k:Stages>
+          <k:Stage title="{i18n>stageCreated}" info="{requester}" state="success"/>
+          <k:Stage title="{i18n>stageApproval}" info="{path: 'status', formatter: '.statusText'}" state="{path: 'status', formatter: '.statusState'}"/>
+          <k:Stage title="{i18n>stageOrder}" state="{path: 'status', formatter: '.orderState'}"/>
+        </k:Stages>
+        <k:Activity items="{path: 'history', templateShareable: false}">
+          <k:ActivityItem person="{person}" time="{time}" text="{parts: ['event', 'reason'], formatter: '.eventText'}"/>
+        </k:Activity>
+        <k:Stack row="true" gap="8">
+          <k:HoldButton id="approve" text="{i18n>approve}" doneText="{i18n>approved}" done="{= ${status} === 'approved' }" enabled="{= ${status} === 'waiting' }" confirm=".onApprove"/>
+          <k:Button text="{i18n>reject}" kind="ghost" enabled="{= ${status} === 'waiting' }" press=".onReject"/>
+        </k:Stack>
+      </k:Stack>
+    </k:Stack>
+  </k:Stack>
+</mvc:View>

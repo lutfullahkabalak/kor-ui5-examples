@@ -1,0 +1,17 @@
+<mvc:View controllerName="kor.example.typescriptstarter.controller.Customer" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:k="kor.ui">
+  <k:Stack gap="20" class="page">
+    <k:Text kind="display" text="{name}"/>
+    <k:Form id="form">
+      <k:FormSection title="{i18n>details}" text="{id}">
+        <k:TextField label="{i18n>name}" required="true" value="{name}"/>
+        <k:TextField label="{i18n>city}" value="{city}"/>
+        <k:NumberField label="{i18n>limit}" unit="EUR" min="0" step="1000" value="{limit}"/>
+      </k:FormSection>
+    </k:Form>
+    <k:Stack row="true" gap="8">
+      <k:Button text="{i18n>back}" kind="ghost" icon="arrow-left" press=".onBack"/>
+      <k:Button text="{i18n>save}" kind="primary" press=".onSave"/>
+    </k:Stack>
+  </k:Stack>
+</mvc:View>

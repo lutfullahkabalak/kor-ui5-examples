@@ -1,0 +1,5 @@
+html, body, .root { margin: 0; height: 100%; }
+body { background: var(--kor-canvas); }
+.page { box-sizing: border-box; max-width: 80rem; margin-inline: auto; padding: clamp(1rem, 3vw, 2.5rem); }
+
+.wrap { flex-wrap: wrap; }

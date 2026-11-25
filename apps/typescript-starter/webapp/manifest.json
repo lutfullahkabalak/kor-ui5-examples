@@ -1,0 +1,101 @@
+{
+  "_version": "1.40.0",
+  "sap.app": {
+    "id": "kor.example.typescriptstarter",
+    "type": "application",
+    "title": "{{appTitle}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "i18n": {
+      "bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": [
+        "",
+        "tr"
+      ],
+      "fallbackLocale": ""
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.108.0",
+      "libs": {
+        "sap.ui.core": {},
+        "kor.ui": {}
+      }
+    },
+    "rootView": {
+      "viewName": "kor.example.typescriptstarter.view.App",
+      "type": "XML",
+      "id": "main",
+      "async": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "kor.example.typescriptstarter.i18n.i18n",
+          "supportedLocales": [
+            "",
+            "tr"
+          ],
+          "fallbackLocale": ""
+        }
+      },
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data.json"
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.ui.core.routing.Router",
+        "viewType": "XML",
+        "viewPath": "kor.example.typescriptstarter.view",
+        "controlId": "shell",
+        "controlAggregation": "content",
+        "clearControlAggregation": true,
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "home",
+          "pattern": "",
+          "target": "home"
+        },
+        {
+          "name": "customers",
+          "pattern": "customers",
+          "target": "customers"
+        },
+        {
+          "name": "customer",
+          "pattern": "customers/{id}",
+          "target": "customer"
+        }
+      ],
+      "targets": {
+        "home": {
+          "viewName": "Home",
+          "viewId": "home"
+        },
+        "customers": {
+          "viewName": "Customers",
+          "viewId": "customers"
+        },
+        "customer": {
+          "viewName": "Customer",
+          "viewId": "customer"
+        }
+      }
+    }
+  }
+}

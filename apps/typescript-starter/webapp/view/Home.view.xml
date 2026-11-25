@@ -1,0 +1,8 @@
+<mvc:View controllerName="kor.example.typescriptstarter.controller.Home" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:k="kor.ui">
+  <k:Stack gap="20" class="page">
+    <k:Text kind="display" text="{i18n>welcome}"/>
+    <k:Text kind="muted" text="{i18n>intro}"/>
+    <k:Stack row="true"><k:Button text="{i18n>customers}" kind="primary" icon="arrow-right" press=".onCustomers"/></k:Stack>
+  </k:Stack>
+</mvc:View>

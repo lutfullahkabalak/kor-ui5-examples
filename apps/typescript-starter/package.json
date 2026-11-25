@@ -1,0 +1,19 @@
+{
+  "name": "kor-example-typescript-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "ui5 serve --open index.html",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && ui5 build --clean-dest --include-dependency kor.ui"
+  },
+  "dependencies": {
+    "kor-ui5": "0.1.0"
+  },
+  "devDependencies": {
+    "@openui5/ts-types-esm": "1.108.51",
+    "@ui5/cli": "4.1.0",
+    "typescript": "5.9.3",
+    "ui5-tooling-transpile": "3.14.1"
+  }
+}

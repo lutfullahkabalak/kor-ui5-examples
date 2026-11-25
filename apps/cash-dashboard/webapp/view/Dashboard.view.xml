@@ -1,0 +1,57 @@
+<mvc:View controllerName="kor.example.cashdashboard.controller.Dashboard" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:k="kor.ui">
+  <k:Stack gap="20" class="page">
+    <k:Stack row="true" gap="12" align="center" justify="space-between">
+      <k:Text kind="display" text="{i18n>appTitle}"/>
+      <k:Segmented label="{i18n>language}" selectedKey="{ui>/language}" change=".onLanguage">
+        <core:Item key="en" text="EN"/>
+        <core:Item key="tr" text="TR"/>
+      </k:Segmented>
+    </k:Stack>
+    <k:Text kind="muted" text="{i18n>intro}"/>
+    <k:Stack row="true" gap="16" align="center" class="wrap">
+      <k:Segmented label="{i18n>color}" selectedKey="#FF5A1F" change=".onColor">
+        <core:Item key="#FF5A1F" text="{i18n>ember}"/>
+        <core:Item key="#0B7A5B" text="{i18n>green}"/>
+        <core:Item key="#2457D6" text="{i18n>blue}"/>
+      </k:Segmented>
+      <k:Toggle text="{i18n>dark}" change=".onDark"/>
+    </k:Stack>
+    <k:Stack class="stats" gap="16">
+      <k:Stat label="{i18n>cash}" value="1284" unit="k EUR" delta="8.4" note="{i18n>vsLast}" trend="{/collected}"/>
+      <k:Stat label="{i18n>openOrders}" value="48" delta="-5" upIsGood="false" note="{i18n>vsLast}"/>
+      <k:Stat label="{i18n>dso}" value="31.5" decimals="1" unit="{i18n>days}" delta="-3.2" upIsGood="false" note="{i18n>vsLast}"/>
+    </k:Stack>
+    <k:Text kind="heading" text="{i18n>flow}"/>
+    <!-- Flow is drawn for a dark surface -->
+    <k:Stack class="night">
+      <k:Flow id="flow" label="{i18n>flow}" height="300" unit="{i18n>orders}" select=".onStop">
+        <k:nodes>
+          <k:FlowNode key="quoted" label="{i18n>quoted}" column="0" value="60"/>
+          <k:FlowNode key="ordered" label="{i18n>ordered}" column="1" value="48"/>
+          <k:FlowNode key="shipped" label="{i18n>shipped}" column="2" value="36"/>
+          <k:FlowNode key="invoiced" label="{i18n>invoiced}" column="3" value="24" state="wait" note="{i18n>late}"/>
+          <k:FlowNode key="paid" label="{i18n>paid}" column="4" value="12"/>
+        </k:nodes>
+        <k:links>
+          <k:FlowLink source="quoted" target="ordered" value="48"/>
+          <k:FlowLink source="ordered" target="shipped" value="36"/>
+          <k:FlowLink source="shipped" target="invoiced" value="24"/>
+          <k:FlowLink source="invoiced" target="paid" value="12"/>
+        </k:links>
+      </k:Flow>
+    </k:Stack>
+    <k:DataGrid id="grid" label="{i18n>list}" rows="{/orders}" height="22rem">
+      <k:Column label="{i18n>order}" path="id" width="110"/>
+      <k:Column label="{i18n>customer}" path="customer" grow="1"/>
+      <k:Column label="{i18n>amount}" path="amount" type="currency" unitPath="currency"/>
+      <k:Column label="{i18n>due}" path="due" type="date"/>
+      <k:Column label="{i18n>stage}" path="stage" type="status" states="{/states}" formatter=".stageText"/>
+    </k:DataGrid>
+    <k:Text kind="heading" text="{i18n>trend}"/>
+    <k:Trend label="{i18n>trend}" labels="{/months}" unit="k EUR" height="220">
+      <k:Series name="{i18n>collected}" kind="bar" values="{/collected}"/>
+      <k:Series name="{i18n>plan}" kind="ghost" values="{/plan}"/>
+    </k:Trend>
+  </k:Stack>
+</mvc:View>

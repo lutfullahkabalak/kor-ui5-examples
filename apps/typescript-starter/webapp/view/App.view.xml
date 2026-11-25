@@ -1,0 +1,16 @@
+<mvc:View controllerName="kor.example.typescriptstarter.controller.App" displayBlock="true" height="100%"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:k="kor.ui">
+  <k:Shell id="shell" brand="Kor" title="{i18n>appTitle}" selectedKey="home" navigate=".onNavigate">
+    <k:items>
+      <k:NavItem key="home" text="{i18n>home}" icon="house"/>
+      <k:NavItem key="customers" text="{i18n>customers}" icon="users"/>
+    </k:items>
+    <k:footer><k:Person name="Elif Aydın" role="{i18n>role}"/></k:footer>
+    <k:dependents>
+      <k:CommandPalette placeholder="{i18n>search}" run=".onNavigate">
+        <k:Command key="home" text="{i18n>home}" icon="house"/>
+        <k:Command key="customers" text="{i18n>customers}" icon="users"/>
+      </k:CommandPalette>
+    </k:dependents>
+  </k:Shell>
+</mvc:View>

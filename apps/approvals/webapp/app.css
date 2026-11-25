@@ -1,0 +1,7 @@
+html, body, .root { margin: 0; height: 100%; }
+body { background: var(--kor-canvas); }
+.page { box-sizing: border-box; max-width: 80rem; margin-inline: auto; padding: clamp(1rem, 3vw, 2.5rem); }
+
+.split { display: grid !important; grid-template-columns: minmax(0, 3fr) minmax(20rem, 2fr); align-items: start; }
+.panel { padding: 1.5rem; border: 1px solid var(--kor-line); border-radius: 14px; background: var(--kor-surface); }
+@media (max-width: 60rem) { .split { grid-template-columns: minmax(0, 1fr); } }

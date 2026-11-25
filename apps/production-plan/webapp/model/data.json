@@ -1,0 +1,75 @@
+{
+  "lanes": [
+    {
+      "key": "a",
+      "title": "Line A",
+      "capacity": 80
+    },
+    {
+      "key": "b",
+      "title": "Line B",
+      "capacity": 95
+    },
+    {
+      "key": "c",
+      "title": "Test bench",
+      "capacity": 40
+    }
+  ],
+  "tasks": [
+    {
+      "id": "WO-81",
+      "lane": "a",
+      "text": "Valve assembly",
+      "start": "2026-12-01",
+      "end": "2026-12-03",
+      "progress": 60,
+      "status": "running"
+    },
+    {
+      "id": "WO-82",
+      "lane": "a",
+      "text": "Pump assembly",
+      "start": "2026-12-05",
+      "end": "2026-12-07",
+      "progress": 0,
+      "status": "planned"
+    },
+    {
+      "id": "WO-83",
+      "lane": "b",
+      "text": "Gearbox milling",
+      "start": "2026-12-02",
+      "end": "2026-12-06",
+      "progress": 35,
+      "status": "running"
+    },
+    {
+      "id": "WO-84",
+      "lane": "b",
+      "text": "Shaft turning",
+      "start": "2026-12-08",
+      "end": "2026-12-10",
+      "progress": 0,
+      "status": "planned"
+    },
+    {
+      "id": "WO-85",
+      "lane": "c",
+      "text": "Final inspection",
+      "start": "2026-11-30",
+      "end": "2026-12-01",
+      "progress": 100,
+      "status": "finished"
+    },
+    {
+      "id": "WO-86",
+      "lane": "c",
+      "text": "Pressure test",
+      "start": "2026-12-04",
+      "end": "2026-12-05",
+      "progress": 0,
+      "status": "planned"
+    }
+  ]
+}

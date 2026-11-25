@@ -1,0 +1,38 @@
+<mvc:View controllerName="kor.example.productionplan.controller.Plan" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:k="kor.ui">
+  <k:Stack gap="20" class="page">
+    <k:Stack row="true" gap="12" align="center" justify="space-between">
+      <k:Text kind="display" text="{i18n>appTitle}"/>
+      <k:Segmented label="{i18n>language}" selectedKey="{ui>/language}" change=".onLanguage">
+        <core:Item key="en" text="EN"/>
+        <core:Item key="tr" text="TR"/>
+      </k:Segmented>
+    </k:Stack>
+    <k:Text kind="muted" text="{i18n>intro}"/>
+    <k:Stack row="true">
+      <k:Segmented label="{i18n>view}" selectedKey="{ui>/view}">
+        <core:Item key="schedule" text="{i18n>schedule}"/>
+        <core:Item key="board" text="{i18n>board}"/>
+      </k:Segmented>
+    </k:Stack>
+    <k:Schedule label="{i18n>appTitle}" visible="{= ${ui>/view} === 'schedule' }" start="2026-11-30" today="2026-12-02" days="14" dayWidth="72"
+        lanes="{path: '/lanes', templateShareable: false}" tasks="{path: '/tasks', templateShareable: false}" taskChange=".onTaskChange" taskPress=".onTask">
+      <k:lanes><k:ScheduleLane key="{key}" title="{title}" capacity="{capacity}"/></k:lanes>
+      <k:tasks><k:ScheduleTask key="{id}" lane="{lane}" title="{id}" text="{text}" start="{start}" end="{end}" progress="{progress}" state="{path: 'status', formatter: '.state'}"/></k:tasks>
+    </k:Schedule>
+    <k:Board label="{i18n>board}" visible="{= ${ui>/view} === 'board' }" cards="{path: '/tasks', templateShareable: false}" cardMove=".onCardMove" cardPress=".onTask">
+      <k:columns>
+        <k:BoardColumn key="planned" title="{i18n>planned}"/>
+        <k:BoardColumn key="running" title="{i18n>running}" limit="3" state="info"/>
+        <k:BoardColumn key="finished" title="{i18n>finished}" state="success"/>
+      </k:columns>
+      <k:cards><k:BoardCard key="{id}" column="{status}" title="{id}" text="{text}" meta="{= ${progress} + '%' }"/></k:cards>
+    </k:Board>
+    <k:Sheet id="sheet" title="{id}" subtitle="{text}" close=".onClose">
+      <k:DateField label="{i18n>start}" value="{start}"/>
+      <k:DateField label="{i18n>end}" value="{end}"/>
+      <k:NumberField label="{i18n>progress}" value="{progress}" unit="%" min="0" max="100" step="5"/>
+      <k:footer><k:Button text="{i18n>close}" kind="primary" press=".onClose"/></k:footer>
+    </k:Sheet>
+  </k:Stack>
+</mvc:View>

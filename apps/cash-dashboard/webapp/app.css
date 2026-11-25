@@ -1,0 +1,7 @@
+html, body, .root { margin: 0; height: 100%; }
+body { background: var(--kor-canvas); }
+.page { box-sizing: border-box; max-width: 80rem; margin-inline: auto; padding: clamp(1rem, 3vw, 2.5rem); }
+
+.stats { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.wrap { flex-wrap: wrap; }
+.night { padding: 1.5rem; border-radius: 14px; background: #14181A; }

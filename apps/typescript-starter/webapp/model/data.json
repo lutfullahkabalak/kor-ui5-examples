@@ -1,0 +1,32 @@
+{
+  "customers": [
+    {
+      "id": "C-10",
+      "name": "Aster",
+      "city": "Hamburg",
+      "limit": 50000,
+      "currency": "EUR"
+    },
+    {
+      "id": "C-11",
+      "name": "Mira",
+      "city": "İzmir",
+      "limit": 32000,
+      "currency": "EUR"
+    },
+    {
+      "id": "C-12",
+      "name": "Luma",
+      "city": "Porto",
+      "limit": 18000,
+      "currency": "EUR"
+    },
+    {
+      "id": "C-13",
+      "name": "Nordlicht",
+      "city": "Kiel",
+      "limit": 75000,
+      "currency": "EUR"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "requests": [
+    {
+      "id": "PR-2041",
+      "subject": "Laser cutter nozzles",
+      "requester": "Elif Aydın",
+      "supplier": "Nordlicht Tools",
+      "amount": 18400,
+      "currency": "EUR",
+      "due": "2026-11-27",
+      "status": "waiting",
+      "history": [
+        {
+          "person": "Elif Aydın",
+          "event": "evCreated",
+          "reason": "",
+          "time": "24.11.2026"
+        }
+      ]
+    },
+    {
+      "id": "PR-2042",
+      "subject": "Forklift battery",
+      "requester": "Mert Kaya",
+      "supplier": "Voltra",
+      "amount": 96500,
+      "currency": "EUR",
+      "due": "2026-11-28",
+      "status": "waiting",
+      "history": [
+        {
+          "person": "Mert Kaya",
+          "event": "evCreated",
+          "reason": "",
+          "time": "24.11.2026"
+        }
+      ]
+    },
+    {
+      "id": "PR-2043",
+      "subject": "Safety gloves, 400 pairs",
+      "requester": "Deniz Arslan",
+      "supplier": "Handwerk AG",
+      "amount": 7200,
+      "currency": "EUR",
+      "due": "2026-11-30",
+      "status": "waiting",
+      "history": [
+        {
+          "person": "Deniz Arslan",
+          "event": "evCreated",
+          "reason": "",
+          "time": "24.11.2026"
+        }
+      ]
+    },
+    {
+      "id": "PR-2044",
+      "subject": "Barcode scanners",
+      "requester": "Elif Aydın",
+      "supplier": "Lumen Systems",
+      "amount": 41250,
+      "currency": "EUR",
+      "due": "2026-12-01",
+      "status": "waiting",
+      "history": [
+        {
+          "person": "Elif Aydın",
+          "event": "evCreated",
+          "reason": "",
+          "time": "24.11.2026"
+        }
+      ]
+    },
+    {
+      "id": "PR-2045",
+      "subject": "Hydraulic oil, 12 drums",
+      "requester": "Can Demir",
+      "supplier": "Oleum",
+      "amount": 22800,
+      "currency": "EUR",
+      "due": "2026-12-03",
+      "status": "waiting",
+      "history": [
+        {
+          "person": "Can Demir",
+          "event": "evCreated",
+          "reason": "",
+          "time": "24.11.2026"
+        }
+      ]
+    }
+  ]
+}

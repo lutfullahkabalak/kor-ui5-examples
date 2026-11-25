@@ -1,0 +1,515 @@
+{
+  "orders": [
+    {
+      "id": "SO-300",
+      "customer": "Aster",
+      "amount": 9500,
+      "currency": "EUR",
+      "due": "2026-12-01",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-301",
+      "customer": "Mira",
+      "amount": 11500,
+      "currency": "EUR",
+      "due": "2026-12-04",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-302",
+      "customer": "Luma",
+      "amount": 5250,
+      "currency": "EUR",
+      "due": "2026-12-07",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-303",
+      "customer": "Nordlicht",
+      "amount": 25000,
+      "currency": "EUR",
+      "due": "2026-12-10",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-304",
+      "customer": "Voltra",
+      "amount": 14500,
+      "currency": "EUR",
+      "due": "2026-12-13",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-305",
+      "customer": "Oleum",
+      "amount": 17250,
+      "currency": "EUR",
+      "due": "2026-12-16",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-306",
+      "customer": "Handwerk",
+      "amount": 6750,
+      "currency": "EUR",
+      "due": "2026-12-19",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-307",
+      "customer": "Aster",
+      "amount": 4750,
+      "currency": "EUR",
+      "due": "2026-12-22",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-308",
+      "customer": "Mira",
+      "amount": 4000,
+      "currency": "EUR",
+      "due": "2026-12-25",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-309",
+      "customer": "Luma",
+      "amount": 2500,
+      "currency": "EUR",
+      "due": "2026-12-28",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-310",
+      "customer": "Nordlicht",
+      "amount": 14750,
+      "currency": "EUR",
+      "due": "2026-12-03",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-311",
+      "customer": "Voltra",
+      "amount": 19500,
+      "currency": "EUR",
+      "due": "2026-12-06",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-312",
+      "customer": "Oleum",
+      "amount": 11250,
+      "currency": "EUR",
+      "due": "2026-12-09",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-313",
+      "customer": "Handwerk",
+      "amount": 27500,
+      "currency": "EUR",
+      "due": "2026-12-12",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-314",
+      "customer": "Aster",
+      "amount": 26250,
+      "currency": "EUR",
+      "due": "2026-12-15",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-315",
+      "customer": "Mira",
+      "amount": 3750,
+      "currency": "EUR",
+      "due": "2026-12-18",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-316",
+      "customer": "Luma",
+      "amount": 9000,
+      "currency": "EUR",
+      "due": "2026-12-21",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-317",
+      "customer": "Nordlicht",
+      "amount": 18500,
+      "currency": "EUR",
+      "due": "2026-12-24",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-318",
+      "customer": "Voltra",
+      "amount": 19000,
+      "currency": "EUR",
+      "due": "2026-12-27",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-319",
+      "customer": "Oleum",
+      "amount": 13500,
+      "currency": "EUR",
+      "due": "2026-12-02",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-320",
+      "customer": "Handwerk",
+      "amount": 10750,
+      "currency": "EUR",
+      "due": "2026-12-05",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-321",
+      "customer": "Aster",
+      "amount": 26750,
+      "currency": "EUR",
+      "due": "2026-12-08",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-322",
+      "customer": "Mira",
+      "amount": 7500,
+      "currency": "EUR",
+      "due": "2026-12-11",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-323",
+      "customer": "Luma",
+      "amount": 28250,
+      "currency": "EUR",
+      "due": "2026-12-14",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-324",
+      "customer": "Nordlicht",
+      "amount": 5250,
+      "currency": "EUR",
+      "due": "2026-12-17",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-325",
+      "customer": "Voltra",
+      "amount": 10250,
+      "currency": "EUR",
+      "due": "2026-12-20",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-326",
+      "customer": "Oleum",
+      "amount": 8750,
+      "currency": "EUR",
+      "due": "2026-12-23",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-327",
+      "customer": "Handwerk",
+      "amount": 2750,
+      "currency": "EUR",
+      "due": "2026-12-26",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-328",
+      "customer": "Aster",
+      "amount": 28500,
+      "currency": "EUR",
+      "due": "2026-12-01",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-329",
+      "customer": "Mira",
+      "amount": 22500,
+      "currency": "EUR",
+      "due": "2026-12-04",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-330",
+      "customer": "Luma",
+      "amount": 27750,
+      "currency": "EUR",
+      "due": "2026-12-07",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-331",
+      "customer": "Nordlicht",
+      "amount": 10250,
+      "currency": "EUR",
+      "due": "2026-12-10",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-332",
+      "customer": "Voltra",
+      "amount": 27500,
+      "currency": "EUR",
+      "due": "2026-12-13",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-333",
+      "customer": "Oleum",
+      "amount": 10500,
+      "currency": "EUR",
+      "due": "2026-12-16",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-334",
+      "customer": "Handwerk",
+      "amount": 8000,
+      "currency": "EUR",
+      "due": "2026-12-19",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-335",
+      "customer": "Aster",
+      "amount": 7250,
+      "currency": "EUR",
+      "due": "2026-12-22",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-336",
+      "customer": "Mira",
+      "amount": 11750,
+      "currency": "EUR",
+      "due": "2026-12-25",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-337",
+      "customer": "Luma",
+      "amount": 11250,
+      "currency": "EUR",
+      "due": "2026-12-28",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-338",
+      "customer": "Nordlicht",
+      "amount": 22000,
+      "currency": "EUR",
+      "due": "2026-12-03",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-339",
+      "customer": "Voltra",
+      "amount": 29750,
+      "currency": "EUR",
+      "due": "2026-12-06",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-340",
+      "customer": "Oleum",
+      "amount": 25250,
+      "currency": "EUR",
+      "due": "2026-12-09",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-341",
+      "customer": "Handwerk",
+      "amount": 29250,
+      "currency": "EUR",
+      "due": "2026-12-12",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-342",
+      "customer": "Aster",
+      "amount": 29000,
+      "currency": "EUR",
+      "due": "2026-12-15",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-343",
+      "customer": "Mira",
+      "amount": 13750,
+      "currency": "EUR",
+      "due": "2026-12-18",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-344",
+      "customer": "Luma",
+      "amount": 4750,
+      "currency": "EUR",
+      "due": "2026-12-21",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-345",
+      "customer": "Nordlicht",
+      "amount": 29000,
+      "currency": "EUR",
+      "due": "2026-12-24",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-346",
+      "customer": "Voltra",
+      "amount": 21250,
+      "currency": "EUR",
+      "due": "2026-12-27",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-347",
+      "customer": "Oleum",
+      "amount": 12750,
+      "currency": "EUR",
+      "due": "2026-12-02",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-348",
+      "customer": "Handwerk",
+      "amount": 23250,
+      "currency": "EUR",
+      "due": "2026-12-05",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-349",
+      "customer": "Aster",
+      "amount": 14250,
+      "currency": "EUR",
+      "due": "2026-12-08",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-350",
+      "customer": "Mira",
+      "amount": 18000,
+      "currency": "EUR",
+      "due": "2026-12-11",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-351",
+      "customer": "Luma",
+      "amount": 9750,
+      "currency": "EUR",
+      "due": "2026-12-14",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-352",
+      "customer": "Nordlicht",
+      "amount": 7500,
+      "currency": "EUR",
+      "due": "2026-12-17",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-353",
+      "customer": "Voltra",
+      "amount": 9750,
+      "currency": "EUR",
+      "due": "2026-12-20",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-354",
+      "customer": "Oleum",
+      "amount": 17000,
+      "currency": "EUR",
+      "due": "2026-12-23",
+      "stage": "paid"
+    },
+    {
+      "id": "SO-355",
+      "customer": "Handwerk",
+      "amount": 10750,
+      "currency": "EUR",
+      "due": "2026-12-26",
+      "stage": "quoted"
+    },
+    {
+      "id": "SO-356",
+      "customer": "Aster",
+      "amount": 4750,
+      "currency": "EUR",
+      "due": "2026-12-01",
+      "stage": "ordered"
+    },
+    {
+      "id": "SO-357",
+      "customer": "Mira",
+      "amount": 28000,
+      "currency": "EUR",
+      "due": "2026-12-04",
+      "stage": "shipped"
+    },
+    {
+      "id": "SO-358",
+      "customer": "Luma",
+      "amount": 29500,
+      "currency": "EUR",
+      "due": "2026-12-07",
+      "stage": "invoiced"
+    },
+    {
+      "id": "SO-359",
+      "customer": "Nordlicht",
+      "amount": 19500,
+      "currency": "EUR",
+      "due": "2026-12-10",
+      "stage": "paid"
+    }
+  ],
+  "states": {
+    "quoted": "none",
+    "ordered": "info",
+    "shipped": "info",
+    "invoiced": "wait",
+    "paid": "success"
+  },
+  "months": [
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12"
+  ],
+  "collected": [
+    905,
+    980,
+    1010,
+    1120,
+    1185,
+    1284
+  ],
+  "plan": [
+    900,
+    950,
+    1050,
+    1100,
+    1150,
+    1200
+  ]
+}

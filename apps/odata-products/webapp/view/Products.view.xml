@@ -1,0 +1,45 @@
+<mvc:View controllerName="kor.example.odataproducts.controller.Products" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:k="kor.ui">
+  <k:Stack gap="20" class="page">
+    <k:Stack row="true" gap="12" align="center" justify="space-between">
+      <k:Text kind="display" text="{i18n>appTitle}"/>
+      <k:Segmented label="{i18n>language}" selectedKey="{ui>/language}" change=".onLanguage">
+        <core:Item key="en" text="EN"/>
+        <core:Item key="tr" text="TR"/>
+      </k:Segmented>
+    </k:Stack>
+    <k:Text kind="muted" text="{i18n>intro}"/>
+    <k:Stack row="true" gap="8" align="center" class="wrap">
+      <k:Variants targets="filter grid" storageKey="kor-example-products" standardText="{i18n>standard}"/>
+      <k:Button text="{i18n>new}" icon="plus" press=".onNew"/>
+      <k:Button text="{i18n>discard}" kind="ghost" enabled="{ui>/dirty}" press=".onDiscard"/>
+      <k:Button text="{i18n>save}" kind="primary" enabled="{ui>/dirty}" press=".onSave"/>
+    </k:Stack>
+    <k:FilterBar id="filter" placeholder="{i18n>search}" change=".onFilter">
+      <k:FilterField label="{i18n>name}" path="Name"/>
+      <k:FilterField label="{i18n>price}" path="Price" type="number" unit="EUR"/>
+    </k:FilterBar>
+    <k:DataGrid id="grid" label="{i18n>appTitle}" rows="{/Products}" height="24rem" selectionMode="Multi" cellChange=".onEdit">
+      <k:Column label="{i18n>product}" path="Id" width="110" pinned="true"/>
+      <k:Column label="{i18n>name}" path="Name" width="180" grow="1" editable="true"/>
+      <k:Column label="{i18n>category}" path="CategoryId" width="110"/>
+      <k:Column label="{i18n>price}" path="Price" type="currency" unitPath="Currency" decimals="2" editable="true"/>
+      <k:Column label="{i18n>stock}" path="Stock" type="number" editable="true"/>
+    </k:DataGrid>
+    <k:Sheet open="{ui>/creating}" title="{i18n>new}" close=".onCancel">
+      <k:Form id="form" stacked="true">
+        <k:FormSection>
+          <k:TextField label="{i18n>product}" required="true" value="{ui>/draft/Id}"/>
+          <k:TextField label="{i18n>name}" required="true" value="{ui>/draft/Name}"/>
+          <k:LookupField label="{i18n>category}" required="true" rows="{/Categories}" keyPath="Id" textPath="Name" value="{ui>/draft/CategoryId}" text="{ui>/categoryText}"/>
+          <k:NumberField label="{i18n>price}" unit="EUR" decimals="2" min="0" value="{ui>/draft/Price}"/>
+          <k:NumberField label="{i18n>stock}" min="0" value="{ui>/draft/Stock}"/>
+        </k:FormSection>
+      </k:Form>
+      <k:footer>
+        <k:Button text="{i18n>cancel}" press=".onCancel"/>
+        <k:Button text="{i18n>create}" kind="primary" press=".onCreate"/>
+      </k:footer>
+    </k:Sheet>
+  </k:Stack>
+</mvc:View>

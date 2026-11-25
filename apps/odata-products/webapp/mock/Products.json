@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "P-100",
+    "Name": "Ball valve",
+    "CategoryId": "VAL",
+    "Price": "48.50",
+    "Currency": "EUR",
+    "Stock": 320
+  },
+  {
+    "Id": "P-101",
+    "Name": "Check valve",
+    "CategoryId": "VAL",
+    "Price": "62.00",
+    "Currency": "EUR",
+    "Stock": 85
+  },
+  {
+    "Id": "P-102",
+    "Name": "Gear pump",
+    "CategoryId": "PMP",
+    "Price": "415.00",
+    "Currency": "EUR",
+    "Stock": 24
+  },
+  {
+    "Id": "P-103",
+    "Name": "Vane pump",
+    "CategoryId": "PMP",
+    "Price": "389.90",
+    "Currency": "EUR",
+    "Stock": 12
+  },
+  {
+    "Id": "P-104",
+    "Name": "Shaft seal",
+    "CategoryId": "SEA",
+    "Price": "9.75",
+    "Currency": "EUR",
+    "Stock": 1400
+  },
+  {
+    "Id": "P-105",
+    "Name": "Flange gasket",
+    "CategoryId": "SEA",
+    "Price": "4.20",
+    "Currency": "EUR",
+    "Stock": 2600
+  },
+  {
+    "Id": "P-106",
+    "Name": "Pressure sensor",
+    "CategoryId": "SEN",
+    "Price": "128.00",
+    "Currency": "EUR",
+    "Stock": 60
+  },
+  {
+    "Id": "P-107",
+    "Name": "Flow sensor",
+    "CategoryId": "SEN",
+    "Price": "210.50",
+    "Currency": "EUR",
+    "Stock": 18
+  }
+]
