@@ -14,3 +14,4 @@ Amaç: kor-ui5 için kopyalanabilir, tek başına çalışan örnek uygulamalar 
 - OData modeli Component'ten önce istek atar: MockServer `boot.js`'te, ComponentSupport'tan önce başlatılır.
 - TypeScript'te olay parametreleri `as unknown as {...}` ile daraltılır.
 - TextField değeri odak kaybında yazılır; testte gerçek tıklama kullan.
+- 2026-11-26: tüm uygulamalar kor-ui5 0.2.0'a geçti; cash-dashboard'a PieChart (dilime basınca listeyi süzer) ve yatay BarChart eklendi. Stack'e grid vermek için `.korStack.charts` gibi iki sınıflı seçici gerekir.
