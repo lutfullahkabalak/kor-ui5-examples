@@ -10,7 +10,7 @@ Small, complete OpenUI5 applications built with the published [kor-ui5](https://
 | [odata-products](apps/odata-products) | OData V2: filter, inline edit, batch save, create, value help, saved views |
 | [approvals](apps/approvals) | Request list, history, hold to approve, reject with a reason |
 | [production-plan](apps/production-plan) | Schedule and Board over the same data |
-| [cash-dashboard](apps/cash-dashboard) | Stat, Trend, Flow filtering a list, runtime theming |
+| [cash-dashboard](apps/cash-dashboard) | Stat, PieChart, BarChart, Trend, Flow filtering a list, runtime theming |
 | [no-build](apps/no-build) | One HTML file, everything from a CDN |
 
 ## Take one

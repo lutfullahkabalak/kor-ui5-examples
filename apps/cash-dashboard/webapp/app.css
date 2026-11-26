@@ -5,3 +5,5 @@ body { background: var(--kor-canvas); }
 .stats { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
 .wrap { flex-wrap: wrap; }
 .night { padding: 1.5rem; border-radius: 14px; background: #14181A; }
+
+.korStack.charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }

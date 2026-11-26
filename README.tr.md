@@ -10,7 +10,7 @@ Yayımlanmış [kor-ui5](https://github.com/lutfullahkabalak/kor-ui5) paketiyle 
 | [odata-products](apps/odata-products) | OData V2: süzme, yerinde düzenleme, toplu kayıt, oluşturma, değer yardımı, kayıtlı görünüm |
 | [approvals](apps/approvals) | Talep listesi, geçmiş, basılı tutarak onay, gerekçeli ret |
 | [production-plan](apps/production-plan) | Aynı veri üzerinde Schedule ve Board |
-| [cash-dashboard](apps/cash-dashboard) | Stat, Trend, listeyi süzen Flow, çalışırken tema |
+| [cash-dashboard](apps/cash-dashboard) | Stat, PieChart, BarChart, Trend, listeyi süzen Flow, çalışırken tema |
 | [no-build](apps/no-build) | Her şeyi CDN'den alan tek HTML dosyası |
 
 Her klasör tek başına çalışır:

@@ -41,6 +41,20 @@
         </k:links>
       </k:Flow>
     </k:Stack>
+    <k:Stack class="charts" gap="16">
+      <k:Stack gap="8">
+        <k:Text kind="heading" text="{i18n>openByStage}"/>
+        <k:PieChart kind="donut" label="{i18n>openByStage}" totalLabel="{i18n>open}" unit="EUR" compact="true" slicePress=".onStop" slices="{/byStage}">
+          <k:PieSlice key="{key}" label="{name}" value="{amount}"/>
+        </k:PieChart>
+      </k:Stack>
+      <k:Stack gap="8">
+        <k:Text kind="heading" text="{i18n>aging}"/>
+        <k:BarChart horizontal="true" showValues="true" label="{i18n>aging}" labels="{/agingLabels}" unit="k EUR">
+          <k:Series name="{i18n>open}" values="{/aging}"/>
+        </k:BarChart>
+      </k:Stack>
+    </k:Stack>
     <k:DataGrid id="grid" label="{i18n>list}" rows="{/orders}" height="22rem">
       <k:Column label="{i18n>order}" path="id" width="110"/>
       <k:Column label="{i18n>customer}" path="customer" grow="1"/>

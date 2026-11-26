@@ -65,6 +65,12 @@ const flows = {
 	},
 	"cash-dashboard": async (p) => {
 		await see(p, "SO-300"); await see(p, "Cash collected");
+		if ((await p.evaluate(() => document.querySelectorAll(".korSlice").length)) < 3) throw new Error("pie chart has no slices");
+		if ((await p.evaluate(() => document.querySelectorAll(".korBars .korCol").length)) !== 4) throw new Error("bar chart has no bars");
+		const rows = () => p.evaluate(() => document.querySelector("[aria-rowcount]")?.getAttribute("aria-rowcount"));
+		const all = await rows();
+		await p.evaluate(() => document.querySelectorAll(".korPieRow")[3].click()); await wait(300);
+		if (!all || (await rows()) === all) throw new Error("pie slice did not filter the list");
 		await click(p, "Green"); await wait(200);
 		if (!(await p.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue("--kor-accent"))).includes("0B7A5B")) throw new Error("accent did not change");
 		await p.evaluate(() => document.querySelector("[role=switch]").click()); await wait(200);

@@ -20,6 +20,13 @@ sap.ui.define([
     onInit() {
       this.getView().setModel(new JSONModel({ language }), "ui");
       document.title = this.text("appTitle");
+      // Pie chart slices: open amount per stage, from the same orders as the list
+      const model = this.getOwnerComponent().getModel();
+      const fill = () => {
+        const stages = ["quoted", "ordered", "shipped", "invoiced"];
+        model.setProperty("/byStage", stages.map((key) => ({ key, name: this.text(key), amount: model.getProperty("/orders").filter((o) => o.stage === key).reduce((sum, o) => sum + o.amount, 0) })));
+      };
+      if (model.getProperty("/orders")) fill(); else model.dataLoaded().then(fill);
     },
     stageText(stage) { return stage ? this.text(stage) : ""; },
     onStop(event) {
